@@ -10,7 +10,7 @@ select v.nom_village  from village v where nb_huttes > 35;
 select t.num_trophee  from trophee t where date_prise between cast ('2052-05-01' as Date) and cast ('2052-06-30' as Date);
 
 --5. Noms des habitants commençant par 'a' et contenant la lettre 'r'. (3 lignes)
-select h.nom from habitant h where nom like 'A%r%';
+select h.nom from habitant h where h.nom like 'A%r%';
 
 --6. Numéros des habitants ayant bu les potions numéros 1, 3 ou 4. (8 lignes)
 select distinct a.num_hab from absorber a where a.num_potion =1 or a.num_potion = 3 or a.num_potion = 4 ;
